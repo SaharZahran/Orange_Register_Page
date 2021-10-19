@@ -1,0 +1,109 @@
+.page_container {
+    display: flex;
+}
+
+#logo {
+    width: 200px;
+}
+
+.page_left {
+    width: 30%;
+}
+
+.page_right {
+    width: 70%;
+}
+
+div.nav_right {
+    border-bottom: 2px solid black;
+}
+
+#navbarNav ul {
+    font-weight: bold;
+}
+
+.page_right .navbar .bg-light {
+    color: black;
+}
+
+form .container {
+    width: 50%;
+    margin-top: 2%;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.orange_btn {
+    background-color: #FF7900;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+}
+
+.transparent_btn {
+    display: block;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-check .important {
+    text-decoration: underline;
+}
+
+.star {
+    color: #FF7900;
+}
+
+#termsHelp {
+    color: red;
+}
+
+.activation {
+    margin: 10% 30%;
+    font-size: 2rem;
+}
+
+.activation span {
+    color: #FF7900;
+    font-size: 2.2rem;
+}
+
+.back {
+    width: 30%;
+    background-color: #FF7900;
+    border-radius: 6px;
+    color: whitesmoke;
+    border: none;
+    padding: 0.5rem 2rem;
+    margin: 0 30%;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .page_left {
+        display: none;
+    }
+    .page_right {
+        width: 100%;
+    }
+    .navbar {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    #logo {
+        width: 150px;
+    }
+    legend {
+        font-size: 1rem;
+    }
+}
