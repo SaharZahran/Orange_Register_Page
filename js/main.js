@@ -83,8 +83,12 @@ const page_right = document.querySelector('.page_right');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (emailHelp !== '' || phoneHelp !== '' || passwordHelp !== '') {
+    console.log(emailHelp);
+    console.log(phoneHelp);
+    console.log(passwordHelp);
+    if (emailHelp.innerText === '' || phoneHelp.innerText === '' || passwordHelp.innerText === '') {
         if (terms.checked) {
+            console.log('hiiiiiiiiiiiiiiiiiii');
             form.style.display = 'none'
             const email_activiation = document.createElement('p');
             email_activiation.innerHTML = `There is only one step left for you to be <span>successfully</span> registered <br>
@@ -98,7 +102,6 @@ form.addEventListener('submit', (event) => {
             back_button.classList.add('back');
         } else {
             termsHelp.innerText = 'terms & conditions not checked!'
-            console.log(terms.value.checked);
 
         }
     }
