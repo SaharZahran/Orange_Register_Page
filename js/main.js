@@ -44,7 +44,7 @@ function showError(errorMessage) {
 function validation() {
     try {
         if (email.value !== '') {
-            if (email.value.match(emailRegex)) {
+            if (emailRegex.test(email.value)) {
                 emailHelp.innerText = '';
             } else {
                 throw 'eg: username@domain.com';
@@ -53,7 +53,8 @@ function validation() {
             checkIfEmpty();
         }
         if (mobile.value !== '') {
-            if (mobile.value.match(phoneRegex)) {
+            if (phoneRegex.test(mobile.value)) {
+                console.log(phoneRegex.test(mobile.value));
                 phoneHelp.innerText = '';
             } else {
                 throw 'eg: 077*******';
@@ -62,7 +63,7 @@ function validation() {
             checkIfEmpty();
         }
         if (password.value !== '') {
-            if (password.value.match(passwordRegex)) {
+            if (passwordRegex.test(password.value)) {
                 passwordHelp.innerText = '';
             } else {
                 throw 'The password should be between 6-18 characters';
@@ -88,7 +89,6 @@ form.addEventListener('submit', (event) => {
     console.log(passwordHelp);
     if (emailHelp.innerText === '' || phoneHelp.innerText === '' || passwordHelp.innerText === '') {
         if (terms.checked) {
-            console.log('hiiiiiiiiiiiiiiiiiii');
             form.style.display = 'none'
             const email_activiation = document.createElement('p');
             email_activiation.innerHTML = `There is only one step left for you to be <span>successfully</span> registered <br>
